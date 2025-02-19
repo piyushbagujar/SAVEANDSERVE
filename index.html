@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAVE AND SERVE</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom Styles */
+    body, html {
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      background: #0a0a0a;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #00ff87 0%, #60efff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cyber-border {
+      position: relative;
+      border: 2px solid transparent;
+      background: linear-gradient(#0a0a0a, #0a0a0a) padding-box,
+                  linear-gradient(135deg, #00ff87 0%, #60efff 100%) border-box;
+    }
+    .glow-effect {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 5px rgba(96, 239, 255, 0.5)); }
+      to { filter: drop-shadow(0 0 20px rgba(96, 239, 255, 0.8)); }
+    }
+    .hover-scale {
+      transition: transform 0.3s ease;
+    }
+    .hover-scale:hover {
+      transform: scale(1.05);
+    }
+    .hover-shadow-glow:hover {
+      box-shadow: 0 0 25px rgba(96, 239, 255, 0.4);
+    }
+  </style>
+</head>
+<body class="text-gray-100">
+  <!-- Navbar -->
+  <header class="fixed w-full z-50 bg-black/80 backdrop-blur-sm">
+    <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <img src="logo.png" alt="Logo" class="w-10 h-10 glow-effect" />
+        <span class="text-xl font-bold gradient-text">SAVE AND SERVE</span>
+      </div>
+      <ul class="flex items-center space-x-6">
+        <li><a href="#home" class="hover:text-cyan-400 transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-cyan-400 transition-colors">About</a></li>
+        <li><a href="#services" class="hover:text-cyan-400 transition-colors">Services</a></li>
+        <li><a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a></li>
+        <li>
+          <button class="px-5 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-semibold hover:shadow-lg hover:shadow-cyan-400/30 transition-all">
+            Login
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative w-full h-screen overflow-hidden">
+    <img src="media/dab8746ebb0d48e0413f5d97a8dd712c[1].jpg" class="absolute inset-0 w-full h-full object-cover opacity-50" alt="Hero Background" />
+    <div class="relative container mx-auto px-6 py-24 flex flex-col items-start justify-center h-full">
+      <h1 class="bg-gradient-to-r from-red-600 to-orange-500 text-white text-3xl md:text-5xl font-bold inline-block px-6 py-2 rounded">
+        WE MAKE IT EASY TO
+      </h1>
+      <p class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">
+        Find, Secure, and Deliver Food
+      </p>
+      <p class="mt-4 text-lg md:text-xl max-w-xl text-gray-300">
+        We are a non‑profit organization dedicated to bridging the gap between food donors and those in need, ensuring that surplus food finds a purpose.
+      </p>
+      <div class="mt-8 space-x-4">
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-green-600 to-teal-500 text-white font-semibold hover-shadow-glow transition-all">
+          Donate Food
+        </button>
+        <button class="px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold hover-shadow-glow transition-all">
+          Secure Food
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold underline decoration-green-500">
+          About Us
+        </h2>
+      </div>
+      <div class="flex flex-col md:flex-row items-center justify-center">
+        <div class="md:w-1/2 p-6 text-center md:text-left">
+          <p class="text-lg text-gray-300">
+            At SAVE AND SERVE, our mission is to rescue surplus food and deliver it to those who need it the most. Every day, perfectly good food goes to waste while millions struggle with hunger. We are here to change that narrative.
+          </p>
+          <p class="mt-4 text-lg text-gray-300">
+            Our platform connects food donors—including restaurants, households, and businesses—with receivers such as NGOs, shelters, and underprivileged communities. We strive to make the donation process simple, safe, and efficient.
+          </p>
+        </div>
+        <div class="md:w-1/2 p-6 flex justify-center">
+          <img src="media/Annamrita-mumbai.png" alt="About Us" class="w-full md:w-3/4 rounded-lg shadow-lg hover-scale" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold gradient-text mb-4">
+          Our Services
+          <div class="h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 w-24 mx-auto mt-2"></div>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="cyber-border p-6 rounded-xl bg-black/40 hover:bg-black/60 transition-all">
+          <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-lg mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Real-Time Donation</h3>
+          <p class="text-gray-400">Instant matching system connecting surplus food with local needs through AI-powered logistics.</p>
+        </div>
+        
+        <div class="cyber-border p-6 rounded-xl bg-black/40 hover:bg-black/60 transition-all">
+          <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-lg mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Smart Distribution</h3>
+          <p class="text-gray-400">Optimized routing system ensuring fastest delivery with minimal environmental impact.</p>
+        </div>
+
+        <div class="cyber-border p-6 rounded-xl bg-black/40 hover:bg-black/60 transition-all">
+          <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-lg mb-4 flex items-center justify-center">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Community Network</h3>
+          <p class="text-gray-400">Connect with local volunteers, businesses, and organizations in our ecosystem.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gradient-to-br from-cyan-900/30 to-emerald-900/30">
+    <div class="container mx-auto px-6 text-center">
+      <div class="cyber-border rounded-2xl p-8 bg-black/40">
+        <h2 class="text-3xl font-bold gradient-text mb-4">Join the Food Revolution</h2>
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div class="p-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full mx-auto mb-4 flex items-center justify-center text-black text-2xl font-bold">1</div>
+            <h3 class="text-lg font-bold mb-2">Register</h3>
+          </div>
+          <div class="p-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full mx-auto mb-4 flex items-center justify-center text-black text-2xl font-bold">2</div>
+            <h3 class="text-lg font-bold mb-2">Choose Role</h3>
+          </div>
+          <div class="p-4">
+            <div class="w-16 h-16 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full mx-auto mb-4 flex items-center justify-center text-black text-2xl font-bold">3</div>
+            <h3 class="text-lg font-bold mb-2">Make Impact</h3>
+          </div>
+        </div>
+        <button class="px-8 py-4 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-semibold hover:scale-105 transition-transform">
+          Start Now →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold gradient-text mb-4">
+          Contact Hub
+          <div class="h-1 bg-gradient-to-r from-cyan-400 to-emerald-400 w-24 mx-auto mt-2"></div>
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="cyber-border p-8 rounded-2xl bg-black/40">
+          <form class="space-y-6">
+            <div>
+              <input type="text" placeholder="Your Name" class="w-full p-3 bg-black/30 rounded-lg border border-gray-800 focus:ring-2 focus:ring-cyan-400 outline-none transition-all">
+            </div>
+            <div>
+              <input type="email" placeholder="Your Email" class="w-full p-3 bg-black/30 rounded-lg border border-gray-800 focus:ring-2 focus:ring-cyan-400 outline-none transition-all">
+            </div>
+            <div>
+              <textarea rows="4" placeholder="Your Message" class="w-full p-3 bg-black/30 rounded-lg border border-gray-800 focus:ring-2 focus:ring-cyan-400 outline-none transition-all"></textarea>
+            </div>
+            <button type="submit" class="w-full py-3 rounded-full bg-gradient-to-r from-cyan-400 to-emerald-400 text-black font-semibold hover:scale-105 transition-transform">
+              Send Message
+            </button>
+          </form>
+        </div>
+        <div class="cyber-border p-8 rounded-2xl bg-black/40 flex flex-col justify-between">
+          <div class="space-y-6">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-lg flex items-center justify-center">
+                <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="font-bold">Support Hotline</p>
+                <p class="text-cyan-400">+1 (555) FOOD-SAVE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black/80 py-8">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-cyan-400 font-bold mb-4">SAVE AND SERVE</h3>
+          <p class="text-gray-400">Fighting hunger through technology and community collaboration.</p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Our Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Legal</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-cyan-400 transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+        <p>&copy; 2025 SAVE AND SERVE. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
